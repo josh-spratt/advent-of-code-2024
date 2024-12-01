@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from solutions.day_01_part_01 import solve
+from solutions.day_01_part_02 import solve
 
 EXAMPLE_INPUT = """
 3   4
@@ -16,4 +16,4 @@ EXAMPLE_INPUT = """
 def test_solve(mock_fetch_data):
     mock_fetch_data.return_value = EXAMPLE_INPUT.strip()
     result = solve()
-    assert result == 11
+    assert result == 31
