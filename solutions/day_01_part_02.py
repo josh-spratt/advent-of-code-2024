@@ -18,13 +18,18 @@ def solve():
 
     left_locations_list = [int(x[0]) for x in matrix]
     right_locations_list = [int(x[1]) for x in matrix]
-    right_locations_list_hist = {k: right_locations_list.count(k) for k in set(right_locations_list)}
+    right_locations_list_hist = {
+        k: right_locations_list.count(k) for k in set(right_locations_list)
+    }
     left_locations_list.sort()
 
     similarity_score = 0
     for i in range(len(left_locations_list)):
         try:
-            similarity_score += left_locations_list[i] * right_locations_list_hist[left_locations_list[i]]
+            similarity_score += (
+                left_locations_list[i]
+                * right_locations_list_hist[left_locations_list[i]]
+            )
         except KeyError:
             logger.debug("Item does not exist in right list")
 
