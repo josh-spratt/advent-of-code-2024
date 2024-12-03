@@ -5,7 +5,7 @@ import os
 import time
 
 logger = AdventLogger("day02part02").get_logger()
-    
+
 
 def solve():
     start_time = time.time()
