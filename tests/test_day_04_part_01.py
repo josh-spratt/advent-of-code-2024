@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from solutions.day_04_part_01 import solve
+from solutions.day04.part_01 import solve
 
 EXAMPLE_INPUT = """
 MMMSXXMASM
