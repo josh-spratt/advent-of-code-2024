@@ -1,14 +1,13 @@
 import time
 import solutions.day01.part_01
+import solutions.day01.part_02
+import solutions.day02.part_01
+import solutions.day02.part_02
+import solutions.day03.part_01
+import solutions.day03.part_02
+import solutions.day04.part_01
+import solutions.day04.part_02
 from src.logger import AdventLogger
-from solutions.day01 import part_01
-from solutions.day01 import part_02
-from solutions.day02 import part_01
-from solutions.day02 import part_02
-from solutions.day03 import part_01
-from solutions.day03 import part_02
-from solutions.day04 import part_01
-from solutions.day04 import part_02
 
 
 def main():
