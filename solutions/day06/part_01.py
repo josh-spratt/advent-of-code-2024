@@ -42,7 +42,6 @@ def solve():
         nx, ny = x + dx, y + dy
 
         if not (0 <= nx < len(matrix) and 0 <= ny < len(matrix[0])):
-            logger.info(f"Character exited the grid at ({x}, {y}) facing {facing}")
             break
 
         if 0 <= nx < len(matrix) and 0 <= ny < len(matrix[0]) and matrix[nx][ny] != "#":
