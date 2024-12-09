@@ -24,7 +24,7 @@ def solve():
     for item in input_list:
         key = int(item.split(": ")[0])
         numbers = [int(x) for x in item.split(": ")[1].split(" ")]
-        
+
         for c in product("+*", repeat=len(numbers) - 1):
             res = numbers[0]
             for i in range(1, len(numbers)):
