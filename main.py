@@ -13,6 +13,8 @@ import solutions.day06.part_01
 import solutions.day06.part_02
 import solutions.day07.part_01
 import solutions.day07.part_02
+import solutions.day08.part_01
+import solutions.day08.part_02
 from src.logger import AdventLogger
 
 
@@ -33,6 +35,8 @@ def main():
     solutions.day06.part_02.solve()
     solutions.day07.part_01.solve()
     solutions.day07.part_02.solve()
+    solutions.day08.part_01.solve()
+    solutions.day08.part_02.solve()
     end_time = time.time()
     elapsed_time = end_time - start_time
     logger.info(f"All solutions completed in {elapsed_time:.2f} seconds")
