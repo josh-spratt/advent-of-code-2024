@@ -68,7 +68,9 @@ def solve():
             middle_page_number = get_page_middle(page)
             middle_page_numbers_sum += middle_page_number
 
-    logger.info(f"Sum of middle page numbers for fixed pages: {middle_page_numbers_sum}")
+    logger.info(
+        f"Sum of middle page numbers for fixed pages: {middle_page_numbers_sum}"
+    )
 
     end_time = time.time()
     elapsed_time = end_time - start_time

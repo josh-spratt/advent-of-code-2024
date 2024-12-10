@@ -7,15 +7,9 @@ import time
 logger = AdventLogger("day06part02").get_logger()
 
 
-direction_map = {
-    "up": (-1, 0),
-    "right": (0, 1),
-    "down": (1, 0),
-    "left": (0, -1)
-}
+direction_map = {"up": (-1, 0), "right": (0, 1), "down": (1, 0), "left": (0, -1)}
 
 directions = ["up", "right", "down", "left"]
-
 
 
 def check_for_infinite_loop(matrix, start_x, start_y, start_facing):
@@ -43,7 +37,7 @@ def check_for_infinite_loop(matrix, start_x, start_y, start_facing):
             # Turn right if blocked
             current_index = directions.index(facing)
             facing = directions[(current_index + 1) % len(directions)]
-        
+
 
 def solve():
     start_time = time.time()
@@ -55,7 +49,7 @@ def solve():
     )  # TODO: Don't forget to update the day if you copy/paste
     input_data_string = data_retriever.fetch_input_data()
     matrix = parse_input_to_matrix(input_data_string)
-    
+
     facing = "up"
 
     for i in range(len(matrix)):
@@ -75,7 +69,7 @@ def solve():
                 if check_for_infinite_loop(matrix, x, y, facing):
                     count += 1
 
-                matrix[i][j] = "."  # Reset the position    
+                matrix[i][j] = "."  # Reset the position
 
     logger.info(f"Infinite loop positions: {count}")
 

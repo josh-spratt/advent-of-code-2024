@@ -17,13 +17,8 @@ def solve():
     )  # TODO: Don't forget to update the day if you copy/paste
     input_data_string = data_retriever.fetch_input_data()
     matrix = parse_input_to_matrix(input_data_string)
-    
-    direction_map = {
-        "up": (-1, 0),
-        "right": (0, 1),
-        "down": (1, 0),
-        "left": (0, -1)
-    }
+
+    direction_map = {"up": (-1, 0), "right": (0, 1), "down": (1, 0), "left": (0, -1)}
 
     directions = ["up", "right", "down", "left"]
     facing = "up"
@@ -34,7 +29,7 @@ def solve():
             if matrix[i][j] == "^":
                 x, y = i, j
                 break
-    
+
     visited_positions = set()
 
     while True:

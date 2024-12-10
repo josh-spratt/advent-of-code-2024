@@ -18,7 +18,7 @@ def solve():
     )  # TODO: Don't forget to update the day if you copy/paste
     input_data_string = data_retriever.fetch_input_data()
     input_matrix = parse_input_to_matrix(input_data_string)
-    
+
     rows = len(input_matrix)
     columns = len(input_matrix[0])
 
@@ -30,7 +30,7 @@ def solve():
                 if char not in antenna_map:
                     antenna_map[char] = []
                 antenna_map[char].append((r, c))
-    
+
     antinodes = set()
 
     for coords in antenna_map.values():
@@ -40,12 +40,14 @@ def solve():
                 r2, c2 = coords[j]
                 antinodes.add((2 * r1 - r2, 2 * c1 - c2))
                 antinodes.add((2 * r2 - r1, 2 * c2 - c1))
-    
+
     counter = 0
     for antinode in antinodes:
-        if (antinode[0] >= 0 and antinode[0] <= rows - 1) and (antinode[1] >= 0 and antinode[1] <= columns - 1):
+        if (antinode[0] >= 0 and antinode[0] <= rows - 1) and (
+            antinode[1] >= 0 and antinode[1] <= columns - 1
+        ):
             counter += 1
-    
+
     logger.info(f"Number of antinodes: {counter}")
 
     end_time = time.time()
