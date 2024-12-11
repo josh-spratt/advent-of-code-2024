@@ -41,9 +41,9 @@ def solve():
         if len(transformed_input) <= spot:
             break
         transformed_input[spot] = transformed_input.pop()
-    
+
     for i, n in enumerate(transformed_input):
-        total += (int(n) * i)
+        total += int(n) * i
 
     logger.info(f"Filesystem checksum: {total}")
 

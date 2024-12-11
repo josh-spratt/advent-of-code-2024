@@ -3,6 +3,14 @@ from unittest.mock import patch
 from solutions.day10.part_02 import solve
 
 EXAMPLE_INPUT = """
+89010123
+78121874
+87430965
+96549874
+45678903
+32019012
+01329801
+10456732
 """
 
 
@@ -10,4 +18,4 @@ EXAMPLE_INPUT = """
 def test_solve(mock_fetch_data):
     mock_fetch_data.return_value = EXAMPLE_INPUT.strip()
     result = solve()
-    assert result == None
+    assert result == 81
